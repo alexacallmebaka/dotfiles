@@ -29,7 +29,7 @@ alias ssh='TERM=xterm-256color ssh'
 alias rm='trash'
 alias vivi='vim $HOME/.vim/vimrc'
 
-alias lf='$HOME/scripts/lfwrapper'
+alias lf='$XDG_CONFIG_HOME/lf/lfwrapper'
 
 #Clean up home directory
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
