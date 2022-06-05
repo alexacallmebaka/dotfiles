@@ -1,0 +1,56 @@
+env:
+  # TERM variable
+  #
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  TERM: alacritty
+
+font:
+  size: 12
+  normal:
+    family: Mononoki Nerd Font
+    style: Regular
+  bold:
+    family: Mononoki Nerd Font
+    style: Bold
+  italic:
+    family: Mononoki Nerd Font
+    style: italic
+
+colors:
+  
+  #background/foreground colors
+  primary:
+    background: '0x000000'
+    foreground: '0x00ff66'
+
+  #normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xcc0403'
+    green:   '0x19cb00'
+    yellow:  '0xcecb00'
+    blue:    '0x334eff'
+    magenta: '0xcb1ed1'
+    cyan:    '0x0dcdcd'
+    white:   '0xe5e5e5'
+
+  #bright colors
+  bright:
+    black:   '0x4d4d4d'
+    red:     '0x3e0605'
+    green:   '0x23fd00'
+    yellow:  '0xfffd00'
+    blue:    '0x4d64ff'
+    magenta: '0xfd28ff'
+    cyan:    '0x14ffff'
+    white:   '0xffffff'
+
+  #cursor colors
+  cursor:
+    cursor: '0xff00ad'
+    text: '0x2100ff'
+window:
+  opacity: 0.75

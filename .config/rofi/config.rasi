@@ -1,0 +1,5 @@
+configuration {
+ modi: "drun";
+ font: "mononoki Nerd Font 12";
+}
+@theme "sidebar"

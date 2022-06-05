@@ -1,0 +1,96 @@
+"plugin stuff
+call plug#begin()
+Plug 'vimsence/vimsence'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'lervag/vimtex'
+call plug#end()
+
+"thesaurus function, blatantky stilen from the docs
+func Thesaur(findstart, base)
+      if a:findstart
+    	return searchpos('\<', 'bnW', line('.'))[1] - 1
+      endif
+      let res = []
+      let h = ''
+      for l in systemlist('aiksaurus '.shellescape(a:base))
+	if l[:3] == '=== '
+	  let h = '('.substitute(l[4:], ' =*$', ')', '')
+	elseif l ==# 'Alphabetically similar known words are: '
+	  let h = "\U0001f52e"
+	elseif l[0] =~ '\a' || (h ==# "\U0001f52e" && l[0] ==# "\t")
+	  call extend(res, map(split(substitute(l, '^\t', '', ''), ', '), {_, val -> {'word': val, 'menu': h}}))
+	endif
+      endfor
+      return res
+    endfunc
+    
+if exists('+thesaurusfunc')
+  set thesaurusfunc=Thesaur
+endif
+
+
+"allow vim to detect filetype
+filetype on
+
+"load plugins based on filetype
+filetype plugin on
+
+"syntax highlighting
+syntax on
+
+set fileencodings=utf-8
+
+set encoding=utf-8
+
+"line numbers
+set number
+
+"show what mode i am in
+set showmode
+
+"use highlighting when doing a search
+set hlsearch
+
+"while searching though a file incrementally highlight matching characters as you type
+set incsearch
+
+"case insensitive search
+set ignorecase
+
+"this sets the line numbers relative to the current line
+set relativenumber
+
+"highlights the line the cursor is on
+set cursorline
+
+"the document will start scrolling 8 lines before I reach the bottom of the document
+set scrolloff=8
+
+"this sets my backups to undofiles and not swp files
+set noswapfile
+set nobackup
+set undodir=$HOME/.vim/undo//
+set undofile
+
+"get .viminfo out of home dir
+set viminfofile=$HOME/.vim/viminfo
+
+"fancy tab completion
+set wildmenu
+
+"we will remap the enter key to run :noh in normal mode, so it clears hlsearch results. it runs :noh, returns the command, and then actually hits return so it keeps its normal function. the <backspace> is so vim doesn't show :noh as the last command run.
+nnoremap <CR> :noh<CR><CR>:<backspace>
+
+"turn spell check on and off
+nnoremap <F1> :setlocal spell! spelllang=en_us<CR> 
+
+"VimTeX viewer
+let g:vimtex_view_method='zathura'
+
+let g:vimtex_quickfix_open_on_warning = 0
+
+"status
+set laststatus=2
+
+"folds to us marker mode
+set foldmethod=marker

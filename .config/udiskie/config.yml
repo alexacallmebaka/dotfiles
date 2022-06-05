@@ -1,0 +1,3 @@
+program_options:
+  password_prompt:
+    ["rofi", "-theme", "DarkBlue", "-password", "-width", "-35", "-lines", "0", "-dpi", "100", "-dmenu", "-p", "{device_presentation} password?"]

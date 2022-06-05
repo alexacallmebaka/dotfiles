@@ -1,0 +1,41 @@
+*background: #000000
+*foreground: #FFFFFF
+
+xterm*foreground:   #93a1a1
+xterm*background:   #002b36
+xterm*cursorColor:  #93a1a1
+
+!black
+xterm*color0:       #002b36
+xterm*color8:       #657b83
+
+!red
+xterm*color1:       #dc322f
+xterm*color9:       #dc322f
+
+!green
+xterm*color2:       #859900
+xterm*color10:      #859900
+
+!yellow
+xterm*color3:       #b58900
+xterm*color11:      #b58900
+
+!blue
+xterm*color4:       #268bd2
+xterm*color12:      #268bd2
+
+!magenta
+xterm*color5:       #6c71c4
+xterm*color13:      #6c71c4
+
+!cyan
+xterm*color6:       #2aa198
+xterm*color14:      #2aa198
+
+!white
+xterm*color7:       #93a1a1
+xterm*color15:      #fdf6e3
+
+xterm*faceName: Mononoki Nerd Font
+xterm*faceSize: 15
