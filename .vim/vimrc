@@ -78,7 +78,8 @@ set viminfofile=$HOME/.vim/viminfo
 "fancy tab completion
 set wildmenu
 
-"we will remap the enter key to run :noh in normal mode, so it clears hlsearch results. it runs :noh, returns the command, and then actually hits return so it keeps its normal function. the <backspace> is so vim doesn't show :noh as the last command run.
+"we will remap the enter key to run :noh in normal mode, so it clears hlsearch results. it runs :noh, returns the command, and 
+"then actually hits return so it keeps its normal function. the <backspace> is so vim doesn't show :noh as the last command run.
 nnoremap <CR> :noh<CR><CR>:<backspace>
 
 "turn spell check on and off
