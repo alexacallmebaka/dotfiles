@@ -5,7 +5,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'lervag/vimtex'
 call plug#end()
 
-"thesaurus function, blatantky stilen from the docs
+"thesaurus function, blatantly stolen from the docs
 func Thesaur(findstart, base)
       if a:findstart
     	return searchpos('\<', 'bnW', line('.'))[1] - 1

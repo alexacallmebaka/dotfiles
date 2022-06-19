@@ -1,4 +1,4 @@
-export PATH=$PATH:"/home/james/scripts":"/home/james/.local/bin":"$HOME/.cabal/bin"
+export PATH=$PATH:"$HOME/scripts":"$HOME/.local/bin":"$HOME/.cabal/bin"
 
 #default programs
 export EDITOR="vim"

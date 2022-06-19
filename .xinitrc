@@ -1,5 +1,5 @@
 #load Xresources
-xrdb -load ~/.config/X11/xresources
+xrdb -load "$XDG_CONFIG_HOME/X11/xresources"
 
 #start udiskie automount daemon
 udiskie &

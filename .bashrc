@@ -14,7 +14,10 @@ alias sudo='sudo '
 #aliases
 
 #i3wm
-alias vii3='$EDITOR $XDG_CONFIG_HOME/i3/config'
+alias vii3='$VISUAL $XDG_CONFIG_HOME/i3/config'
+
+#polybar
+alias vipb='$VISUAL $XDG_CONFIG_HOME/polybar/config.ini'
 
 #programs
 alias waifu2x='waifu2x-ncnn-vulkan'
