@@ -38,3 +38,17 @@ export PYTHONDONTWRITEBYTECODE=1
 
 #export variables with sensitive info
 source $HOME/.bash_profile_private
+
+#source bashrc when running in any interactive shell.
+#this is so it will be sourced by things like tmux, which use an interactive login shell.
+
+#if running bash
+if [ -n "$BASH_VERSION" ]; then
+	
+	#include .bashrc if it exists
+	if [ -f "$HOME/.bashrc" ]
+	then
+	source "$HOME/.bashrc"
+	fi
+fi
+
