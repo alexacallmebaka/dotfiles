@@ -22,6 +22,9 @@ exec_always --no-startup-id picom --experimental-backends
 #polybar
 exec_always --no-startup-id $XDG_CONFIG_HOME/polybar/launch.sh
 
+#dock/undock
+exec --no-startup-id dockd --daemon
+
 #window stuff
 #class                 border  backgr. text    indicator child_border
 client.focused          #324BF4 #324BF4 #ffffff #324BF4    #324BF4 

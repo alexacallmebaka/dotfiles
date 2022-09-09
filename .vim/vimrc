@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'vimsence/vimsence'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'lervag/vimtex'
+Plug 'whonore/Coqtail'
 call plug#end()
 
 "thesaurus function, blatantly stolen from the docs
