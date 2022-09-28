@@ -54,8 +54,8 @@ element normal.urgent {
     text-color:       var(urgent-foreground);
 }
 element normal.active {
-    background-color: var(active-background);
-    text-color:       var(active-foreground);
+    background-color: var(normal-background);
+    text-color:       var(normal-foreground);
 }
 element selected.normal {
     background-color: var(selected-normal-background);
@@ -66,8 +66,8 @@ element selected.urgent {
     text-color:       var(selected-urgent-foreground);
 }
 element selected.active {
-    background-color: var(selected-active-background);
-    text-color:       var(selected-active-foreground);
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
 }
 element alternate.normal {
     background-color: var(alternate-normal-background);
@@ -78,8 +78,8 @@ element alternate.urgent {
     text-color:       var(alternate-urgent-foreground);
 }
 element alternate.active {
-    background-color: var(alternate-active-background);
-    text-color:       var(alternate-active-foreground);
+    background-color: var(alternate-normal-background);
+    text-color:       var(alternate-normal-foreground);
 }
 element-text {
     background-color: transparent;
