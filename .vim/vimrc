@@ -4,6 +4,8 @@ Plug 'vimsence/vimsence'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'lervag/vimtex'
 Plug 'whonore/Coqtail'
+Plug 'puremourning/vimspector'
+Plug 'SirVer/ultisnips'
 call plug#end()
 
 "thesaurus function, blatantly stolen from the docs
