@@ -21,7 +21,7 @@ case "${file,,}" in
 	gs -o "$thumbnail" -sDEVICE=pngalpha -dLastPage=1 "$file" >/dev/null
 	preview "$thumbnail" "$@"
 	;;
-  *.jpg|*.jpeg|*.png|*.bmp) preview "$file" "$@";;
+  *.jpg|*.jpeg|*.png|*.bmp|*.nef) preview "$file" "$@";;
   *.svg)
 	thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
 	convert "$file" "$thumbnail"

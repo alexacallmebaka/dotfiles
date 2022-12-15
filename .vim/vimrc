@@ -8,7 +8,7 @@ Plug 'puremourning/vimspector'
 Plug 'SirVer/ultisnips'
 call plug#end()
 
-"thesaurus function, blatantly stolen from the docs
+"thesaurus function, blatantly stolen from vim docs {{{1
 func Thesaur(findstart, base)
       if a:findstart
     	return searchpos('\<', 'bnW', line('.'))[1] - 1
@@ -31,6 +31,7 @@ if exists('+thesaurusfunc')
   set thesaurusfunc=Thesaur
 endif
 
+"1}}}
 
 "allow vim to detect filetype
 filetype on
@@ -41,6 +42,7 @@ filetype plugin on
 "syntax highlighting
 syntax on
 
+"encoding
 set fileencodings=utf-8
 
 set encoding=utf-8
@@ -82,7 +84,7 @@ set viminfofile=$HOME/.vim/viminfo
 set wildmenu
 
 "we will remap the enter key to run :noh in normal mode, so it clears hlsearch results. it runs :noh, returns the command, and 
-"then actually hits return so it keeps its normal function. the <backspace> is so vim doesn't show :noh as the last command run.
+"then actually hits return so it keeps its normal function. the <backspace> is so vim doesn't show :noh as the last command run
 nnoremap <CR> :noh<CR><CR>:<backspace>
 
 "turn spell check on and off
@@ -91,6 +93,7 @@ nnoremap <F1> :setlocal spell! spelllang=en_us<CR>
 "VimTeX viewer
 let g:vimtex_view_method='zathura'
 
+"do not open quickfix window for warnings
 let g:vimtex_quickfix_open_on_warning = 0
 
 "status
@@ -98,3 +101,6 @@ set laststatus=2
 
 "folds to us marker mode
 set foldmethod=marker
+
+"set the tab key to use two spaces
+set tabstop=2 shiftwidth=2 expandtab
