@@ -1,6 +1,6 @@
 "plugin stuff
 call plug#begin()
-Plug 'vimsence/vimsence'
+Plug 'Stoozy/vimcord'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'lervag/vimtex'
 Plug 'whonore/Coqtail'
@@ -104,3 +104,9 @@ set foldmethod=marker
 
 "set the tab key to use two spaces
 set tabstop=2 shiftwidth=2 expandtab
+
+"no text wrapping
+set nowrap
+
+"do not auto break long lines in insert mode
+set formatoptions+=l
